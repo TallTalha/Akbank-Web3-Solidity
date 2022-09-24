@@ -65,19 +65,22 @@ contract Variables {
     mapping(uint => Human) list2; // Humanlardan oluşan bir liste.
     Human person1;
     
+    /*
     person1.id = 2;
     person1.name = "mehmet";
     person1.age = 21
-    person1.adres = 0x5B38Da6a701c568545dCfcB03FcB875f56beddC4;
+    person1.adres = 0x5B38Da6a701c568545dCfcB03FcB875f56beddC4; */
     
     //###enum####
-    enum trafficLight { // Ne işe yarar? Mesela block numarası belli bir sayıya ulaşınca trafficLight green olsun diyebiliriz.
-                        // Ayrıca if(trafficLight == RED ) diyerek kontroller sağlayabilmemize olanak sağlar. Kullanım nedeni okunaklı ve anlaşılır olmasıdır.
+    enum trafficLight { 
+                        
         RED,
         YELLOW,
         GREEN
     }
-    trafficLight.GREEN;
+    // Ne işe yarar? Mesela block numarası belli bir sayıya ulaşınca trafficLight green olsun diyebiliriz.
+    // Ayrıca if(trafficLight == RED ) diyerek kontroller sağlayabilmemize olanak sağlar. Kullanım nedeni okunaklı ve anlaşılır olmasıdır.
+    /* trafficLight.GREEN */
 
     //#### ETHER TANIMLAMASI #### Sisten ether üzerinde olduğu için büyük ihtimalle ether transferi yapmamız gerekecek.
 
@@ -88,11 +91,13 @@ contract Variables {
 
     // ### ZAMAN BİRİMLERİ ###
 
+    
     1 = 1 seconds;
     1 minutes = 60 seconds;
     1 hours = 60 minutes = 3600 seconds;
     1 days;
     1 weeks;
+    
 
     // CTRL + K kısayolu ile seçilen metinler yorum satırı yapılır.
     // CTRL + K + U kısayolu ile seçilen syorum satırları normal metine çevrilebilir.
