@@ -22,7 +22,7 @@ contract Enum {
     function get() view external returns(Status){ //This funciton tell us what is index of status
        return status; 
     }
-    function set(Status _status) external { //This funciton will set the index of Status when we want to changing
+    function set(Status _status) external { //This function will set the Status index when we want to change the state.
         status = _status;
     } 
 
