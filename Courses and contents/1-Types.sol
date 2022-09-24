@@ -94,8 +94,21 @@ contract Variables {
     //block.difficult blockchainin zorluğu
     //block.gaslimit
     //return msg.sender; gönderici adresini döndür.
+/*
+    There are 3 types of variables in Solidity:
 
-    
+1.State Variables
 
+Declared outside the function.
+Stored on the blockchain.
+2.Local Variables:
+
+Not stored on the blockchain.
+Declared inside the function.
+3.Global:
+
+Blockchain related variables.
+Following this tutorial will explain the details of these variable types.
+*/
 
 }
