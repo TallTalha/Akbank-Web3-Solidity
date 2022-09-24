@@ -41,6 +41,13 @@ contract Variables {
     list[3] = "alim"; //Bu ne demek: list adlı değişken 3 valuesini "alim" string ifadesi ile eşleştirdi, bağdaştırdı. 3=>alim. üç alime götürür. 
     // Yani biz list adlı mapping variable'ına  3 değerini input olarak verirsek bize "alim" output'unu verir.
 
+    // Default değerler nelerdir?
+    // Unassigned variables have a default value
+    bool public defaultBoo; // false
+    uint public defaultUint; // 0
+    int public defaultInt; // 0
+    address public defaultAddr; // 0x0000000000000000000000000000000000000000
+
     //$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
     // ###User-Defined Value Types - Kullanıcı Tarafından Oluşturulan Değişkenler###
     //Daha çok değişken koleksiyonları çünkü içinde uint,string,int gibi tiplerin toplamında oluşan bir yapı oluşturuyoruz.
