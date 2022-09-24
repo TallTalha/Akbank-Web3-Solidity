@@ -80,7 +80,7 @@ contract Variables {
     }
     // Ne işe yarar? Mesela block numarası belli bir sayıya ulaşınca trafficLight green olsun diyebiliriz.
     // Ayrıca if(trafficLight == RED ) diyerek kontroller sağlayabilmemize olanak sağlar. Kullanım nedeni okunaklı ve anlaşılır olmasıdır.
-    /* trafficLight.GREEN */
+    /* trafficLight */
 
     //#### ETHER TANIMLAMASI #### Sisten ether üzerinde olduğu için büyük ihtimalle ether transferi yapmamız gerekecek.
 
