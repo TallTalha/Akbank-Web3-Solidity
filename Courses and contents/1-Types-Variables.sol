@@ -38,7 +38,7 @@ contract Variables {
     uint[] numbers2 ; // size'ı verilmezse dinamik boyutlu array oluşturmuş oluruz.
     
     mapping(uint => string) list; // Bu ne demek: ben sana uint tipinde bir değer vereceğim o değer bir string tutacak. Bu yapının adıda list'dir.
-    list[3] = "alim"; //Bu ne demek: list adlı değişken 3 valuesini "alim" string ifadesi ile eşleştirdi, bağdaştırdı. 3=>alim. üç alime götürür. 
+    //Bu ne demek: list adlı değişken 3 valuesini "alim" string ifadesi ile eşleştirdi, bağdaştırdı. 3=>alim. üç alime götürür. 
     // Yani biz list adlı mapping variable'ına  3 değerini input olarak verirsek bize "alim" output'unu verir.
 
     // Default değerler nelerdir?
@@ -54,20 +54,21 @@ contract Variables {
     //Aşağıdaki şekilde özel veri tipleri oluşturabiliriz.
     //###struct####
     struct Human {
-        uint ID;
+        uint id;
         string name;
         uint age;
         address adres;
     }
-    mapping(uint=>Human) list2; // Humanlardan oluşan bir liste.
+    mapping(uint => Human) list2; // Humanlardan oluşan bir liste.
     Human person1;
-    person1.ID = 112312312311;
+    
+    person1.id = 2;
     person1.name = "mehmet";
     person1.age = 21
     person1.adres = 0x5B38Da6a701c568545dCfcB03FcB875f56beddC4;
     
     //###enum####
-    enum trafficLight { //Ne işe yarar? Mesela block numarası belli bir sayıya ulaşınca trafficLight green olsun diyebiliriz.
+    enum trafficLight { // Ne işe yarar? Mesela block numarası belli bir sayıya ulaşınca trafficLight green olsun diyebiliriz.
                         // Ayrıca if(trafficLight == RED ) diyerek kontroller sağlayabilmemize olanak sağlar. Kullanım nedeni okunaklı ve anlaşılır olmasıdır.
         RED,
         YELLOW,
@@ -105,17 +106,33 @@ contract Variables {
     There are 3 types of variables in Solidity:
 
     1.State Variables
-
     Declared outside the function.
     Stored on the blockchain.
+    
     2.Local Variables:
-
     Not stored on the blockchain.
     Declared inside the function.
+    
     3.Global:
-
     Blockchain related variables.
-    Following this tutorial will explain the details of these variable types.
+    
 */
+
+ // global ("provides information" about the blockchain)
+
+contract Variables {
+    // State variables are "stored" on the blockchain.
+    string public text = "Hello";
+    uint public num = 123;
+
+    function doSomething() public {
+        // Local variables are "not saved" to the blockchain.
+        uint i = 456;
+
+        // Here are some global variables
+        uint timestamp = block.timestamp; // Current block timestamp
+        address sender = msg.sender; // address of the caller
+    }
+}
 
 }
