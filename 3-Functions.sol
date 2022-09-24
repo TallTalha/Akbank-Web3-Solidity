@@ -53,6 +53,16 @@ contract Functions {
     //Bu yüzden gas fee ödememize gerek yoktur.
 
     //KISACA 
+     uint public po = 1;
+     // Promise not to modify the state.
+     function addToX(uint y) public view returns (uint) {
+        return po + y;
+    }
+
+    // Promise not to modify or read from the state.
+    function add(uint i, uint j) public pure returns (uint) {
+        return i + j;
+    }
     //soru 1 : global veya state variables'lar ile işin var mı ? 
     //cevap 1: Var. O zaman -> Okuma yapacaksan = view ile bildirmelisin, okuma yoksa = public,external,internal,private.
     //cevap 2: Yok. O zaman sen Local Varabiles ile işin var -> pure ile bildirmelisin.
