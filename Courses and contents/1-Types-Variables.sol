@@ -26,6 +26,9 @@ contract Variables {
 
     bytes32 name = "mehmet"; // string ifadelere benzer ama valuesini hexadecimal sayılara çevirerek tutar.
     // 1'den 32 ye kadar boyut belirlemesi yapılabilir. Belirlenmezse bytes değişkeni dinamik olarak boyutunu değiştirir.
+    
+    bytes32 public defaultBytes32; //0x0000000000000000000000000000000000000000000000000000000000000000
+    bytes public defaultBytes; //default: 0x
 
     //$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
     // ###Dynamic-Size Types - Değişken içindeki value kadar yer kaplayan variables###
