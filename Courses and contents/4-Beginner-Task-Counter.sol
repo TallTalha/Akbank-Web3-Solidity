@@ -9,7 +9,7 @@ contract Counter{
         return counter;
     }
     function incCount() public {  //increase ve decrease işlemleri state variable'ı değiştridği için
-        counter += 1;              //blockchain'de değişiklik yapmış olur. Bu yüzden gas fee bedeli alınır.
+        counter += 1;              //blockchain'de değişiklik yapmış oluruz. Bu yüzden gas fee bedeli alınır.
     } 
     function decCount() public {
         counter -= 1;
