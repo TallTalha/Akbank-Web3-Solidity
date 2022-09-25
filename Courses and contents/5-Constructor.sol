@@ -44,6 +44,7 @@ contract Constructor{
     constructor(uint numb){
         afterPrivateNumber = numb;
     }
+    //IMMUTABLE ÖĞELERİN ATAMASI SADECE CONSTRUCTOR'DA YAPILIR, BAŞKA YERDE ATAMA YAPILAMAZ.
     
     
     
@@ -53,4 +54,8 @@ contract Constructor{
     uint public constant privateNumber = 10; 
     //Bu şekilde tanımladıktan sonra seşitliğin karşısına alacağı değer vermek zorundayız. 
     //Sonrasında bu variable değiştirilemez.
+
+    //++++++++++++DİPNOT++++++++++++++++++++
+    //Ayrıca CONSTANT ve IMMUTABLE olarak değişkenler belirlemek gaz tasarrufu yapmamıza olanak sağlar.
+    //Function ile ataması yapılan değişkenin gaz ücreti, CONSTANT veya IMMUTABLE ile yapılan atamadan daha fazladır.
 }
