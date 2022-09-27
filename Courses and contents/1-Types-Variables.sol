@@ -99,7 +99,7 @@ contract Variables {
     1 weeks;
     
 
-    // CTRL + K kısayolu ile seçilen metinler yorum satırı yapılır.
+    // CTRL + K + C kısayolu ile seçilen metinler yorum satırı yapılır.
     // CTRL + K + U kısayolu ile seçilen syorum satırları normal metine çevrilebilir.
 
     //LOCAL VARIABLES
