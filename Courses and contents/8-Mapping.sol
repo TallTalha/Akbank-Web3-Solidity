@@ -15,7 +15,7 @@ contract Mapping{
     //Mapping temel kütüphanede listeleme yapamaz. Ek kütüphaneler ekleyerek mapping listelenebilir. 
     //Mapping kullanırken arkada hashing foksiyonu çalışır.
     //Mapping gaz tasarrufu sağlar. Verilere kolayca erişip düzenleyebilme avantajına sahibiz.
-    //Mapping array gibi ardışık sıralanmaz. Hashlenir ve indexi  belirlenir. Listeleme için ek kütüphane gerekir.
+    //Mapping array gibi ardışık sıralanmaz. Hashlenir ve indexi  belirlenir. Listeleme yapmak için ek kütüphane gerekir.
     //Mapping tanımlandığında değerler default değerlerini alır, mesela atama yapılmadan değişkenler okunursa: uint=0'dır, address=0x....0'dır vb.
     
     
@@ -40,9 +40,34 @@ contract Mapping{
     //bu bilgiye önceden sahip olduğunu varsayarak yazman gerekir. 
     //Yani OOP'deki gibi kullanıcının veri girebilmesi için belirlenek input sistemini düşünmene gerek yok.
     //msg.sender ile input geliyor zaten, hali hazırda input sistemin var.
+    //Ardışık sırlama yok ama adresleri bir adres arryin'de tutarak sıralayabiliriz.
+    //Ayrıca adresleri kayıt ettiğimiz için arrayden index verip mapping ile karşılığa bakabiliriz.
+    //Aşğıda örenği var.
 
+mapping ( address => uint ) public balances ;
+mapping ( address => bool ) public inserted ;
+address [ ] public keys ;
+function set ( address _key , uint _val ) external {
+   balances [ _key ] = _val ;
+
+    if ( ! inserted [ _key ] ) {
+        inserted [ _key ] 
+        keys.push ( _key ) ;} //Burada adresler bir array'e push edilir.
+}
+function getSize ( ) external view returns ( uint ) {
+    return keys.length ;
+}
+function first ( ) external view returns ( uint ) {
+    return balances [ keys [ 0 ] ] ;
+}
+function last ( ) external view returns ( uint ) {
+    return balances [ keys [ keys . length - 1 ] ] ;
 
 }
+function get ( uint i ) external view returns ( uint ) {
+    return balances [ keys [ _i ] ] ; //Burada array indexi ile mapping'i kullandık.
+}
+
 
 //deploy etmeden önce contract'ı NestedMapping seçerek bir .sol dosyasında farklı kontratlar çalıştırabilirsin.
 contract NestedMapping { //Borç verisi tutan bir mapping yapacaz. 3 değer var. Borcu alan, borçlu, borç değeri.
