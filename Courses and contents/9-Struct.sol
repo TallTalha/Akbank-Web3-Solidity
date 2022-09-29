@@ -84,6 +84,7 @@ contract StructEnum {
         Order storage order = orders[_orderID];
         require(order.customer == msg.sender,"You are not the owner of the order");
         order.zipCode = _zipCode;
+        //orders[_orderID].zipCode = _zipCode; şeklindede yazabilirdik.
 
     }
 
