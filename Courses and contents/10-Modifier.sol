@@ -93,7 +93,7 @@ contract Modifier {
     }
     modifier incTx{ //sadece customer fonksiyonlarına eklemek için incTx oluşturduk.
         _;
-        txCount +=1;
+        txCount += 1;
     }
     modifier onlyOwner{
         require(owner == msg.sender, "You are not authorized.");
