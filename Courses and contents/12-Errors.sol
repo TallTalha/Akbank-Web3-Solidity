@@ -27,6 +27,7 @@ contract Errors{
     fallback() external payable {
         revert Deny("No direct payment.");
     }
+    //Bu iki fonksiyonu kontrol etmek için deploy ettikten sonra aşıdaki "Low level interactions" sekmesinden Transact butonuna basabilirsin.
     
     mapping (address => uint256) public userBalance;
 
