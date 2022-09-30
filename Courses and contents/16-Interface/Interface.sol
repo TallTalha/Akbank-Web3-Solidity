@@ -21,6 +21,23 @@ Polimorfizim nedir?
     Solidity'de sınıflar -> kontratlardır
 */
 
+/*
+Interface'ler (Arayüzler) çalışma mantığı farklı olan ama yaptığı iş aynı olan kontratların (örneğin token kontratları) ortak bir standarda sahip olmasını böylece bu kontratlarla çalışmak isteyen birinin her bir kontrata özgü kod yazmak yerine bu standarda uygun tek bir kod yazmasını sağlar
+
+ERC20, ERC721, ERC1155 gibi standartlar aslında bir interface şeklinde tanımlanmıştır.
+
+You can interact with other contracts by declaring an Interface.
+
+Interfaces:
+
+*Cannot have any functions implemented
+*Can inherit from other interfaces
+*Declared functions must be external
+*Cannot declare state variables
+*Cannot declare a constructor
+
+*/
+
 contract EthSender {
     function _send(address payable to, uint256 amount) private {
         to.transfer(amount);
