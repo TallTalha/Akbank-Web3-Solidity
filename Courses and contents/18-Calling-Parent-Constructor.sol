@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.13;
 
+//ITU Blockchain Inheritance videosunda aynı içerik toplu olarak işlendi.
+
 // Base contract X
 contract X {
     string public name;
