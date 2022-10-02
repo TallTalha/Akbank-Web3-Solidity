@@ -25,12 +25,12 @@ contract TodoList{
         Todo storage todo = todo_arr[_index]; //storage cheaper than memory
         _string = todo.text;
         _state = todo.isDone;
-        //default variables are cheaper than returns. return(todo.text,todo.isDone)
+        //default variables are cheaper than returns. "return(todo.text,todo.isDone)"
     }
 
     function updateText(string calldata _text, uint _index) invalidIndex(_index) public {
         Todo storage todo = todo_arr[_index];
-        todo.text = _text;
+        todo.text = _text; //The text field updated.
         //This coding method saves some gas when accessing only one area.
     }
 
