@@ -3,8 +3,12 @@
 pragma solidity ^0.8.13;
 //@dev https://app.patika.dev/JessFlexx , https://github.com/TallTalha
 
-//In this contract, users will be able to create campaigns.They will be able to post when their campaign will start, 
-//when their campaign will end, and how much tokens they want to collect so that their campaign can reach its goal.
+//In this contract, users will be able to create campaigns send token in these campaigns. 
+//Campaign owners will be able to share:
+//-when their campaign will start,
+//-when their campaign will end,
+//-how much tokens they want to collect so that their campaign can reach its goal.
+
 
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.0.0/contracts/token/ERC20/ERC20.sol";
 
