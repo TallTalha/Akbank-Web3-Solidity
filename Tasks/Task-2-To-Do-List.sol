@@ -36,7 +36,7 @@ contract TodoList{
 
     function updateIsDone(uint _index) invalidIndex(_index) public {
         Todo storage todo = todo_arr[_index];
-         todo.isDone = !todo.isDone;
+         todo.isDone = !todo.isDone; //We got the inverse of the isDone variable with "!".
     }
     
     //Modifier used to avoid code duplication. The modifier is checking valid array range.
