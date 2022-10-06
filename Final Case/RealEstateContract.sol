@@ -6,7 +6,10 @@ pragma solidity ^0.8.13;
 
 //Akbank Web3 Practicum Final Case
 /*
-Extra task: Develop a front-end that runs your smart contract. (I couldn't complete the extra mission.)
+Extra task: Develop a front-end that runs your smart contract. 
+(I couldn't complete the extra mission.)
+But then I can add an image in the readme.md file that answers 
+what the draft design would be like if I could front end.
 */
 
 /*
