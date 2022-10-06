@@ -5,6 +5,9 @@ pragma solidity ^0.8.13;
 //@dev https://app.patika.dev/JessFlexx , https://github.com/TallTalha
 
 //Akbank Web3 Practicum Final Case
+/*
+Extra task: Develop a front-end that runs your smart contract. (I couldn't complete the extra mission.)
+*/
 
 /*
 In this contract, users will create their title deeds on the blockchain, and if they want to sell these properties later,
